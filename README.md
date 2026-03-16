@@ -1,2 +1,5 @@
-# homebrew-tap
-The homebrew tap for `rtlsdr-next` distributables.
+# Mah Homebrew Tap
+
+## Installation
+brew tap mattdelashaw/homebrew-tap
+brew install rtlsdr-next
