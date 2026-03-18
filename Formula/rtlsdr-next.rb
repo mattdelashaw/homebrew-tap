@@ -5,21 +5,21 @@ class RtlsdrNext < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.1/rtlsdr-next-aarch64-apple-darwin.tar.xz"
-      sha256 "a37a2b35607cf17135d9b7456ef58eea239bcb1c0e43d7c902f49be31306be37"
+      sha256 "e170183cab7146620038e1fa49152a1319d375b4ffce96edd6b2423c67004281"
     end
     if Hardware::CPU.intel?
       url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.1/rtlsdr-next-x86_64-apple-darwin.tar.xz"
-      sha256 "0d9e15b395fa0624b8925a4b611630cf47c8135ffdd3d3444d8710a823df22e2"
+      sha256 "5618f8ada1ca65651c00fd1e2d76858ac20b74020fc34bf9ccdd466db4154db2"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.1/rtlsdr-next-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1c00942eb7537be9f2ccf8d0432d3e02b74a5fe707b54d6f873b12fb495a630b"
+      sha256 "12bdfa62a35765ac6816dcd41f3774f00bd36f0efa8644b071337b7f969091dd"
     end
     if Hardware::CPU.intel?
       url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.1/rtlsdr-next-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "068fc43acfd7041073a195188b5ee9f5254edb251104b9bd4c80bb32e2012132"
+      sha256 "051cd624765913443bba2d2dc6b978196a48bf9587433c02401390f12feee100"
     end
   end
   license "Apache-2.0"
