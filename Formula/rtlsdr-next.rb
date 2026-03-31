@@ -1,25 +1,25 @@
 class RtlsdrNext < Formula
   desc "A high-performance, async-native Rust driver for RTL2832U-based SDRs, with first-class support for the RTL-SDR Blog V4."
   homepage "https://github.com/mattdelashaw/rtlsdr-next"
-  version "1.0.3"
+  version "1.0.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.3/rtlsdr-next-aarch64-apple-darwin.tar.xz"
-      sha256 "f5b260d53861114020d9797fcc11b11c62f3246645f722ab7ca979d413969a2f"
+      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.4/rtlsdr-next-aarch64-apple-darwin.tar.xz"
+      sha256 "e101f5120d0453a8569adc7e4465eb6f1b23c1cd577a2407e738128f7e118206"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.3/rtlsdr-next-x86_64-apple-darwin.tar.xz"
-      sha256 "1ca16b50e8a99ca7b030b078e20305d0164a8e96c2805b3a865aa49a8cfcbaee"
+      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.4/rtlsdr-next-x86_64-apple-darwin.tar.xz"
+      sha256 "04718fd67f9b1183d6d58bf1bea050b0d01e4b72ee4449dbdb576f9626c9ea0c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.3/rtlsdr-next-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f0faef6f91e1ec4f5902d4a9fcfabfd757f228dc8a06441fb19c132157e977d6"
+      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.4/rtlsdr-next-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c411ca1d7ce57a885c21df6001fd893117063682dc222ea25a6923cc33abf2df"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.3/rtlsdr-next-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f60a62c43c14e81d699b3122b1b5f297727e3ca508451b18591d2b7d6230cc83"
+      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.0.4/rtlsdr-next-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "368b338bb6f4a7eefe011a55eb186a7e9a444fd492f573a0f0fa8c9ee88b41c0"
     end
   end
   license "Apache-2.0"
