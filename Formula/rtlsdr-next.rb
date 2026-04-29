@@ -1,25 +1,25 @@
 class RtlsdrNext < Formula
   desc "A high-performance, async-native Rust driver for RTL2832U-based SDRs, with first-class support for the RTL-SDR Blog V4."
   homepage "https://github.com/mattdelashaw/rtlsdr-next"
-  version "1.1.0"
+  version "1.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.1.0/rtlsdr-next-aarch64-apple-darwin.tar.xz"
-      sha256 "8af7d88b05c0ce56e1e40859b1c124ed04fc7f6e994a001f1b2177d3f06f6fd2"
+      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.1.1/rtlsdr-next-aarch64-apple-darwin.tar.xz"
+      sha256 "46ef7837c4415db1e1f7e23ca3a4f8bc31fc23f7a93b60ecd1126cff4470d25f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.1.0/rtlsdr-next-x86_64-apple-darwin.tar.xz"
-      sha256 "87018b65a384bd65397360c02153a204e914c7cd626ee91b2b8d6db997f6119d"
+      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.1.1/rtlsdr-next-x86_64-apple-darwin.tar.xz"
+      sha256 "478df29df2a48df9519f9ed11f4e7d0224080ccab3a7a0d07f956be06e57ec6e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.1.0/rtlsdr-next-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "aa3d608f654d11ddd61b9407a60dd34fa17b456e4917d061ee94fa30735c1459"
+      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.1.1/rtlsdr-next-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "637f7a47c399676f3b26a5d42717baf2dfd98685ce8643f9a7199d4f4f20dea0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.1.0/rtlsdr-next-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b074e49bae24fcdb0a21ae41a246ddcf89a01032db3368899add89f676b0c233"
+      url "https://github.com/mattdelashaw/rtlsdr-next/releases/download/v1.1.1/rtlsdr-next-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8baaa79353186e95fcf3416b8331499fc62f9d8f82569a2128bb08eb0da4e43f"
     end
   end
   license "Apache-2.0"
@@ -49,10 +49,10 @@ class RtlsdrNext < Formula
   end
 
   def install
-    bin.install "daemon", "rtl_tcp", "websdr" if OS.mac? && Hardware::CPU.arm?
-    bin.install "daemon", "rtl_tcp", "websdr" if OS.mac? && Hardware::CPU.intel?
-    bin.install "daemon", "rtl_tcp", "websdr" if OS.linux? && Hardware::CPU.arm?
-    bin.install "daemon", "rtl_tcp", "websdr" if OS.linux? && Hardware::CPU.intel?
+    bin.install "rtl_tcp", "rtlsdr-daemon", "websdr" if OS.mac? && Hardware::CPU.arm?
+    bin.install "rtl_tcp", "rtlsdr-daemon", "websdr" if OS.mac? && Hardware::CPU.intel?
+    bin.install "rtl_tcp", "rtlsdr-daemon", "websdr" if OS.linux? && Hardware::CPU.arm?
+    bin.install "rtl_tcp", "rtlsdr-daemon", "websdr" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
